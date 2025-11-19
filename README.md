@@ -24,7 +24,7 @@ Upon completing the workshop, you will be able to:
 - **For the analysis:** `Plot Vaccinations.R`
 - **R:** version 4.4.3
 - **RStudio IDE:** version 2024.12.1+563
-- ``renv`` is included to reproduce the environment.
+- `renv` version: 1.0.11. This is included to reproduce the coding environment.
 
 The workshop content, including slides, handouts, and adaptations for asynchronous learning, is available on our [Book of Workshops]([https://ysph-dsde.github.io/Book-of-Workshops/Git-and-GitHub/](https://ysph-dsde.github.io/Book-of-Workshops/Workshops/Git-and-GitHub/git-github-index.html)) webpage.
 
