@@ -52,4 +52,4 @@ Details about these steps can be found in the `Git-and-GitHub/R` directory of th
 
 4. Johns Hopkins University Coronavirus Resource Center, “GovEX,” GovEX GitHub. Accessed: Oct. 14, 2024. [Online]. Available: https://github.com/govex/COVID-19
 
-5. Shelby Golden and Howard Baik, “Getting Started with Git and GitHub,” Book of Workshops. Accessed: Nov. 06, 2025. [Online]. Available: https://ysph-dsde.github.io/Book-of-Workshops/Git-and-GitHub/
+5. Shelby Golden and Howard Baik, “Getting Started with Git and GitHub,” Book of Workshops. Accessed: Nov. 06, 2025. [Online]. Available: https://ysph-dsde.github.io/Book-of-Workshops/Workshops/Git-and-GitHub/git-github-index.html
