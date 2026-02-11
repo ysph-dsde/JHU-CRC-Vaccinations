@@ -57,10 +57,10 @@ Details about these steps can be found in the `Git-and-GitHub/Code/Data Cleaning
 
 1. Dr. B. Moss, Dr. C. Watson, Dr. L. Rutkow, Dr. B. Garibaldi, B. Blauer, and Dr. L. Gardner, “Johns Hopkins Coronavirus Resource Center.” Accessed: Oct. 14, 2024. [Online]. Available: https://coronavirus.jhu.edu/
 
-2. Johns Hopkins University Coronavirus Resource Center, “CSSEGISandData,” Center for Systems Science and Engineering (CSSE). Accessed: Nov. 02, 2024. [Online]. Available: https://github.com/CSSEGISandData/COVID-19
+2. Johns Hopkins University Coronavirus Resource Center, “GovEX Data Dictionary,” GovEX GitHub. Accessed: Oct. 14, 2024. [Online]. Available: https://github.com/govex/COVID-19/blob/master/data_tables/vaccine_data/us_data/data_dictionary.csv
 
-3. Johns Hopkins University Coronavirus Resource Center, “CSSEGISandData Data Dictionary,” Center for Systems Science and Engineering (CSSE). Accessed: Nov. 09, 2025. [Online]. Available: https://ysph-dsde.github.io/Book-of-Workshops/Workshops/Git-and-GitHub/git-github-index.html
-  
-4. Johns Hopkins University Coronavirus Resource Center, “Time Series COVID-19 Cases and Deaths US,” Center for Systems Science and Engineering (CSSE). Accessed: Nov. 09, 2025. [Online]. Available: https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
+3. Johns Hopkins University Coronavirus Resource Center, “Time Series COVID-19 Vaccine US,” GovEX GitHub. Accessed: Oct. 14, 2024. [Online]. Available: https://github.com/govex/COVID-19/blob/master/data_tables/vaccine_data/us_data/time_series/time_series_covid19_vaccine_us.csv
+
+4. Johns Hopkins University Coronavirus Resource Center, “GovEX,” GovEX GitHub. Accessed: Oct. 14, 2024. [Online]. Available: https://github.com/govex/COVID-19
 
 5. Shelby Golden and Howard Baik, “Getting Started with Git and GitHub,” Book of Workshops. Accessed: Nov. 06, 2025. [Online]. Available: https://ysph-dsde.github.io/Book-of-Workshops/Workshops/Git-and-GitHub/git-github-index.html
