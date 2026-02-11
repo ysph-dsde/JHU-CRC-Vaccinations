@@ -1,12 +1,13 @@
 ## ----------------------------------------------------------------------------
 ## Produced by Yale's Public Health Data Science and Data Equity (DSDE) team
 ##
-## Workshop: Getting Started with Git and GitHub pt. 2
-##  Authors: Shelby Golden, M.S.
-##     Date: 2025-04-27
+##     Workshop: Getting Started with Git and GitHub Part 1
+##      Authors: Shelby Golden, M.S.
+## Last Updated: 2026-02-11
 ## 
-##    R version: 4.4.3
-## renv version: 1.0.11
+##       R version: 4.5.2
+## RStudio version: 2026.01.0+392
+##    renv version: 1.1.7
 
 
 ## ----------------------------------------------------------------------------
@@ -38,18 +39,18 @@ suppressPackageStartupMessages({
 ## GovEX. Additional details can be found in the project repositories main 
 ## directory's README file.
 
-covid19_vaccinations_url <- "https://raw.githubusercontent.com/ysph-dsde/Book-of-Workshops/refs/heads/main/Git-and-GitHub/Data/Vaccinations%20Aggregated%20by%20Week.csv"
+covid19_vaccinations_url <- "https://raw.githubusercontent.com/ysph-dsde/Book-of-Workshops/refs/heads/main/Workshops/Git-and-GitHub/Data/Vaccinations%20Aggregated%20by%20Week.csv"
 covid19_vaccinations     <- read_csv(file = covid19_vaccinations_url, show_col_types = FALSE) |>
   as.data.frame() |> _[, -1]
 
 
-covid19_vaccinations_cum_url <- "https://raw.githubusercontent.com/ysph-dsde/Book-of-Workshops/refs/heads/main/Git-and-GitHub/Data/Vaccinations%20Aggregated%20by%20Week_Annual%20Cumulative.csv"
-covid19_vaccinations_cum     <- read_csv(file = covid19_vaccinations_cum_url, show_col_types = FALSE) |>
+covid19_vaccinations_cumulative_url <- "https://raw.githubusercontent.com/ysph-dsde/Book-of-Workshops/refs/heads/main/Workshops/Git-and-GitHub/Data/Vaccinations%20Aggregated%20by%20Week_Annual%20Cumulative.csv"
+covid19_vaccinations_cumulative     <- read_csv(file = covid19_vaccinations_cumulative_url, show_col_types = FALSE) |>
   as.data.frame() |> _[, -1]
 
 # Inspect the data.
 glimpse(covid19_vaccinations)
-glimpse(covid19_vaccinations_cum)
+glimpse(covid19_vaccinations_cumulative)
 
 
 
@@ -74,7 +75,7 @@ unique_regions = covid19_vaccinations$Province_State |>
   (\(x) { x[x %!in% c("United States", unique_states, unique_territories)] }) () |>
   unique() |> _[1:4]
 
-unique_districts = covid19_vaccinations$Province_State |>
+unique_divisions = covid19_vaccinations$Province_State |>
   (\(x) { x[x %!in% c("United States", unique_states, unique_territories)] }) () |>
   unique() |> _[-c(1:4)]
 
@@ -84,7 +85,7 @@ unique_districts = covid19_vaccinations$Province_State |>
 dates = covid19_vaccinations$Week |> unique()
 c(min(dates), max(dates))
 
-dates_cum = covid19_vaccinations_cum$Week |> unique()
+dates_cumulative = covid19_vaccinations_cumulative$Week |> unique()
 
 
 # Vectors with the different column-value names by the types of counts they
@@ -136,14 +137,14 @@ line_plot
 # Plot 2: Cumulative bar plot
 
 # Get the reference horizontal line for overall U.S. vaccinations.
-overall <- covid19_vaccinations_cum[covid19_vaccinations_cum$Province_State == "United States" & 
-                                      covid19_vaccinations_cum$Week == dates_cum[4], 
+overall <- covid19_vaccinations_cumulative[covid19_vaccinations_cumulative$Province_State == "United States" & 
+                                      covid19_vaccinations_cumulative$Week == dates_cumulative[4], 
                                     "People_At_Least_One_Dose_yf_Percent"]
 
 
-bar_plot <- covid19_vaccinations_cum %>%
+bar_plot <- covid19_vaccinations_cumulative %>%
   # Filter the data to plot only the states and one date.
-  filter(Province_State %in% unique_states & Week %in% dates_cum[4]) %>%
+  filter(Province_State %in% unique_states & Week %in% dates_cumulative[4]) %>%
   # Readjust the percentage so they plot better.
   ggplot(data = ., aes(x = reorder(Province_State, People_At_Least_One_Dose_yf_Percent), 
                        y = People_At_Least_One_Dose_yf_Percent/100)) +
